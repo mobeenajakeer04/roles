@@ -1,0 +1,2 @@
+[targets]
+infosvr ansible_connection=local
