@@ -1,16 +1,14 @@
---- 
-- 
-  any_errors_fatal: true
-  hosts: all
-  pre_tasks: 
-    - 
-      become: true
-      name: "update all OS-level packages"
-      when: "('ibm_information_server_clients' not in group_names)"
-      yum: 
-        exclude: "docker*,kubelet*,kubectl*,kubeadm*"
-        name: "*"
+---
+- hosts: all
+  become: yes
+  roles:
+    role:
+      - IBM.infosvr
+  pre_tasks:
+    - name: update all OS-level packages
+      yum:
         state: latest
-  roles: 
-    - IBM.infosvr
-
+        name: '*'
+        exclude: docker*,kubelet*,kubectl*,kubeadm*
+      become: yes
+      when: ('ibm_information_server_clients' not in group_names)
