@@ -1,15 +1,17 @@
----
-
-- name: install and configure IBM InfoSphere Information Server
-  hosts: all
+--- 
+- 
   any_errors_fatal: true
-  roles:
-    - IBM.infosvr
-  pre_tasks:
-    - name: update all OS-level packages
-      yum:
+  hosts: all
+  name: "install and configure IBM InfoSphere Information Server"
+  pre_tasks: 
+    - 
+      become: true
+      name: "update all OS-level packages"
+      when: "('ibm_information_server_clients' not in group_names)"
+      yum: 
+        exclude: "docker*,kubelet*,kubectl*,kubeadm*"
+        name: "*"
         state: latest
-        name: '*'
-        exclude: docker*,kubelet*,kubectl*,kubeadm*
-      become: yes
-      when: ('ibm_information_server_clients' not in group_names)
+  roles: 
+    - IBM.infosvr
+
