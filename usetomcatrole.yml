@@ -17,7 +17,7 @@
     - role: zaxos.tomcat-ansible-role
   tasks:
   - name: copy war file into webapps
-    copy: 
+    fetch: 
       src: /home/jenkins/workspace/rafi-spring-pipe-night bulid/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar	
       dest: /var/lib/tomcat/webapps/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar
-
+      flat: yes
