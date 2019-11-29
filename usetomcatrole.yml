@@ -18,6 +18,6 @@
   tasks:
   - name: copy war file into webapps
     copy: 
-      src: /var/lib/jenkins/workspace/rafi-spring-pipe-night bulid/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar	
+      src: /home/jenkins/workspace/rafi-spring-pipe-night bulid/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar	
       dest: /var/lib/tomcat/webapps/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar
 
