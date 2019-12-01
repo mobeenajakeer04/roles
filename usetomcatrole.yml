@@ -16,8 +16,7 @@
   roles:
     - role: zaxos.tomcat-ansible-role
   tasks:
-  - name: copy war file into webapps
-    fetch: 
-      src: /var/lib/jenkins/workspace/rafi-spring-pipe-night bulid/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar	
-      dest: /var/lib/tomcat/webapps
-      flat: yes
+  - name: copy artifacts to tomcat
+    get_url:
+      url: com/wakaleo/gameoflife/gameoflife/1.0-SNAPSHOT
+      dest: /opt/tomcat/webapps/gameoflife-1.0-20191130.150003-1.pom
