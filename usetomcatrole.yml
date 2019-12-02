@@ -27,4 +27,4 @@
       path: /opt/tomcat/webapps/gameoflife.war
       owner: root
       group: tomcat
-      mode: '1777'
+      mode: u+r
