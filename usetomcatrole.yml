@@ -18,5 +18,5 @@
   tasks:
   - name: copy artifacts to tomcat
     get_url:
-      url: http://18.222.106.39:8081/artifactory/webapp/#/artifacts/browse/tree/General/maven/com/wakaleo/gameoflife/gameoflife/1.0-SNAPSHOT
-      dest: /opt/tomcat/webapps/1.0-SNAPSHOT
+      url: http://18.222.106.39:8081/artifactory/maven/com/wakaleo/gameoflife/gameoflife-web/1.0-SNAPSHOT/gameoflife-web-1.0-20191130.150003-1.war
+      dest: /opt/tomcat/webapps/gameoflife-web-1.0-20191130.150003-1.war
