@@ -25,6 +25,6 @@
   - name: Touch the same file, but add/remove some permissions
     file:
       path: /opt/tomcat/webapps/gameoflife.war
-      owner: tomcat
-      group: root
+      owner: root
+      group: tomcat
       mode: '1777'
