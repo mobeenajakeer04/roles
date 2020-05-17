@@ -18,7 +18,7 @@
   tasks:
   - name: copy artifacts to tomcat
     get_url:
-      url: http://18.223.159.22:8081/artifactory/maven/com/wakaleo/gameoflife/gameoflife-build/1.0-SNAPSHOT/gameoflife-build-1.0-20191130.150003-1.jar
+      url: s3://s3-artifacts-manasa/gameoflife-web/target/gameoflife.war
       dest: /opt/tomcat/webapps/gameoflife.war
       force_basic_auth: yes
       url_username: admin
