@@ -18,7 +18,7 @@
   tasks:
   - name: copy artifacts to tomcat
     get_url:
-      url: s3://s3-artifacts-manasa/gameoflife-web/target/gameoflife.war
+      url: https://s3-artifacts-manasa.s3.amazonaws.com/gameoflife-web/target/gameoflife.war
       dest: /opt/tomcat/webapps/gameoflife.war
       force_basic_auth: yes
       url_username: admin
