@@ -20,12 +20,4 @@
     get_url:
       url: https://s3-artifacts-manasa.s3.amazonaws.com/gameoflife-web/target/gameoflife.war
       dest: /opt/tomcat/webapps/gameoflife.war
-      force_basic_auth: yes
-      url_username: admin
-      url_password: password
-  - name: Touch the same file, but add/remove some permissions
-    file:
-      path: /opt/tomcat/webapps/gameoflife.war
-      owner: root
-      group: tomcat
-      mode: 3192502
+      
