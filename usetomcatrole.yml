@@ -15,5 +15,13 @@
         roles: "tomcat"        
   roles:
     - role: zaxos.tomcat-ansible-role
+  tasks:
+  - name: copy artifacts to tomcat
+    uri:
+      url: https://s3-artifacts-manasa.s3.amazonaws.com/gameoflife-web/target/gameoflife.war
+      method: GET
+      force_basic_auth: yes
+      dest: /opt/tomcat/webapps/gameoflife.war
+      return_content: yes
   
       
