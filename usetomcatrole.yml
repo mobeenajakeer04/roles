@@ -19,7 +19,7 @@
   - name: copy artifacts to tomcat
     copy:
       src: mrs.war
-      dest: /opt/tomcat/webapps/mrs.war
+      dest: /opt/tomcat/webapps/open.war
 
 
 
