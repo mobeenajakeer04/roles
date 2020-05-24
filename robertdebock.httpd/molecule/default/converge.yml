@@ -7,8 +7,8 @@
   vars:
     httpd_locations:
       - name: mylocation1
-        location: /opt
-        backend_url: "http://localhost:8081/myapplication"
+        location: /mylocation1
+        backend_url: "http://localhost:8080/myapplication"
     httpd_vhosts:
       - name: docroot
         servername: www1.example.com
@@ -37,4 +37,4 @@
             value: 1
 
   roles:
-    - role: robertdebock.httpd
+    - role: ansible-role-httpd
