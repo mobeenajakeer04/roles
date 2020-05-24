@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install apache2 server
+    yum:
+      name: httpd
+      state: latest
+  - name: starts the service
+    service:
+      name: httpd
+      enabled: yes
+      state: started
+
