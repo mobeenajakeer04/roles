@@ -11,4 +11,9 @@
       name: httpd
       enabled: yes
       state: started
+  - name: copy artifacts to tomcat
+    copy:
+      src: bahmni.omod
+      dest: /var/www/bahmni.omod
+
 
