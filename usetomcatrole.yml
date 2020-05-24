@@ -18,8 +18,8 @@
   tasks:
   - name: copy artifacts to tomcat
     copy:
-      src: open.war
-      dest: /opt/tomcat/webapps/open.war
+      src: openmrs.war
+      dest: /opt/tomcat/webapps/openmrs.war
 
 
 
