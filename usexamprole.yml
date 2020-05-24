@@ -1,6 +1,6 @@
 ---
 - name: ensure dev servers are configured
-- hosts: dev
+- hosts: all
 
   roles:
     - { role: nickjj.xampp, tags: xampp }
