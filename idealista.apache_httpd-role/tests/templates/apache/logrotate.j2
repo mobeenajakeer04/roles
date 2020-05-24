@@ -1,0 +1,12 @@
+{{ apache_logs_dir }}*.log {
+        daily
+        missingok
+        rotate 8
+        compress
+        notifempty
+        create 640 root root
+        sharedscripts
+        postrotate
+                {{ apache_install_dir }}/bin graceful > /dev/null
+        endscript
+}
