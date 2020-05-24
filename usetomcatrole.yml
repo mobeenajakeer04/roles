@@ -18,8 +18,8 @@
   tasks:
   - name: copy artifacts to tomcat
     copy:
-      src: bahmni-ui.jar
-      dest: /opt/tomcat/webapps/bahmni-ui.jar
+      src: open.war
+      dest: /opt/tomcat/webapps/open.war
 
 
 
